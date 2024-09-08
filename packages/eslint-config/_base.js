@@ -1,6 +1,6 @@
-const { resolve } = require("node:path");
+const { resolve } = require('node:path');
 
-const project = resolve(process.cwd(), "tsconfig.json");
+const project = resolve(process.cwd(), 'tsconfig.json');
 
 /**
  * @type {import("eslint").Linter.Config}
@@ -8,43 +8,37 @@ const project = resolve(process.cwd(), "tsconfig.json");
  */
 module.exports = {
   extends: [
-    require.resolve("@vercel/style-guide/eslint/_base"),
-    require.resolve("@vercel/style-guide/eslint/typescript"),
-    "turbo",
+    require.resolve('@vercel/style-guide/eslint/_base'),
+    require.resolve('@vercel/style-guide/eslint/typescript'),
+    'turbo',
   ],
   parserOptions: {
     project,
   },
-  plugins: ["unused-imports"],
+  plugins: ['unused-imports'],
   rules: {
     // onにするルール
-    "func-style": "warn",
-    "import/order": [
-      "warn",
+    'func-style': 'warn',
+    'import/order': [
+      'warn',
       {
-        groups: [
-          "builtin",
-          "external",
-          "internal",
-          ["parent", "sibling", "index"],
-          "object",
-        ],
-        "newlines-between": "always",
+        groups: ['builtin', 'external', 'internal', ['parent', 'sibling', 'index'], 'object'],
+        'newlines-between': 'always',
         alphabetize: {
-          order: "asc",
+          order: 'asc',
         },
       },
     ],
-    "import/no-empty-named-blocks": "warn",
-    "import/consistent-type-specifier-style": ["warn", "prefer-inline"],
-    "unused-imports/no-unused-imports": "error",
+    'import/no-empty-named-blocks': 'warn',
+    'import/consistent-type-specifier-style': ['warn', 'prefer-inline'],
+    'unused-imports/no-unused-imports': 'error',
 
     // offにするルール
-    "@typescript-eslint/consistent-type-definitions": "off",
-    "@typescript-eslint/explicit-function-return-type": "off",
+    '@typescript-eslint/consistent-type-definitions': 'off',
+    '@typescript-eslint/explicit-function-return-type': 'off',
   },
   settings: {
-    "import/resolver": {
+    'import/resolver': {
       typescript: {
         project,
       },
@@ -52,9 +46,9 @@ module.exports = {
   },
   ignorePatterns: [
     // Ignore dotfiles
-    ".*.js",
-    "node_modules/",
-    "dist/",
+    '.*.js',
+    'node_modules/',
+    'dist/',
   ],
   reportUnusedDisableDirectives: true,
 };
