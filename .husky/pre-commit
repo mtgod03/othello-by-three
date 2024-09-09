@@ -1,1 +1,4 @@
+# GUIから実行して npx: command not found になる場合
+# https://typicode.github.io/husky/how-to.html#node-version-managers-and-guis
+
 npx lint-staged
