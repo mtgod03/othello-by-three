@@ -2,10 +2,12 @@
   "name": "othello-by-three",
   "private": true,
   "scripts": {
-    "build": "turbo build",
-    "dev": "turbo dev",
-    "lint": "turbo lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "lint:fix": "turbo run lint:fix",
+    "format": "prettier --write .",
+    "check-types": "turbo run check-types",
     "prepare": "husky"
   },
   "devDependencies": {
@@ -14,8 +16,7 @@
     "husky": "^9.1.5",
     "lint-staged": "^15.2.10",
     "prettier": "^3.2.5",
-    "turbo": "^2.1.1",
-    "typescript": "^5.4.5"
+    "turbo": "^2.1.1"
   },
   "engines": {
     "node": "20.x"
