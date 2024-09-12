@@ -1,0 +1,16 @@
+*.tsbuildinfo
+
+.next/
+next-env.d.ts
+
+.turbo/
+.vercel/
+
+dist/
+out/
+build/
+
+package.json
+package-lock.json
+
+*.hbs

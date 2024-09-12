@@ -1,35 +1,33 @@
-const { resolve } = require("node:path");
-
-const project = resolve(process.cwd(), "tsconfig.json");
-
-/** @type {import("eslint").Linter.Config} */
+/**
+ * @type {import("eslint").Linter.Config}
+ * @see {@link https://github.com/vercel/style-guide/tree/canary/eslint | The Vercel Style Guide}
+ */
 module.exports = {
   extends: [
-    "eslint:recommended",
-    "prettier",
-    require.resolve("@vercel/style-guide/eslint/next"),
-    "turbo",
+    './_base',
+    require.resolve('@vercel/style-guide/eslint/react'),
+    require.resolve('@vercel/style-guide/eslint/next'),
+    'prettier',
   ],
-  globals: {
-    React: true,
-    JSX: true,
-  },
   env: {
-    node: true,
     browser: true,
+    node: true,
   },
-  plugins: ["only-warn"],
   settings: {
-    "import/resolver": {
-      typescript: {
-        project,
+    'jsx-a11y': {
+      components: {
+        Image: 'img',
+        Link: 'a',
+        Script: 'script',
       },
     },
   },
-  ignorePatterns: [
-    // Ignore dotfiles
-    ".*.js",
-    "node_modules/",
+  overrides: [
+    {
+      files: ['app/**/*.[jt]s?(x)'],
+      rules: {
+        'import/no-default-export': 'off',
+      },
+    },
   ],
-  overrides: [{ files: ["*.js?(x)", "*.ts?(x)"] }],
 };
