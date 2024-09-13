@@ -1,4 +1,5 @@
 /** @type {import("eslint").Linter.Config} */
 module.exports = {
-  extends: ['./_base', 'prettier'],
+  root: true,
+  extends: ['@repo/eslint-config/library.js'],
 };
