@@ -3,16 +3,7 @@
  * @see {@link https://github.com/vercel/style-guide/tree/canary/eslint | The Vercel Style Guide}
  */
 module.exports = {
-  extends: [
-    './_base',
-    require.resolve('@vercel/style-guide/eslint/react'),
-    require.resolve('@vercel/style-guide/eslint/next'),
-    'prettier',
-  ],
-  env: {
-    browser: true,
-    node: true,
-  },
+  extends: [require.resolve('@vercel/style-guide/eslint/next'), 'prettier'],
   settings: {
     'jsx-a11y': {
       components: {
