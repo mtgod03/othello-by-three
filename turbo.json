@@ -17,6 +17,11 @@
     "check-types": {
       "dependsOn": ["_transit"]
     },
+    "test": {},
+    "test:watch": {
+      "cache": false,
+      "persistent": true
+    },
     "_transit": {
       "dependsOn": ["^_transit"]
     }

@@ -11,6 +11,7 @@ module.exports = {
     require.resolve('@vercel/style-guide/eslint/_base'),
     require.resolve('@vercel/style-guide/eslint/typescript'),
     'turbo',
+    'prettier',
   ],
   parserOptions: {
     project,
@@ -47,6 +48,9 @@ module.exports = {
   ignorePatterns: [
     // Ignore dotfiles
     '.*.js',
+    '*.config.[jt]s',
+    '*.config.c[jt]s',
+    '*.config.m[jt]s',
     'node_modules/',
     'dist/',
   ],

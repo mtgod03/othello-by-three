@@ -8,6 +8,8 @@
     "lint:fix": "turbo run lint:fix",
     "format": "prettier --write .",
     "check-types": "turbo run check-types",
+    "test": "turbo run test",
+    "test:watch": "turbo run test:watch",
     "prepare": "husky"
   },
   "devDependencies": {
