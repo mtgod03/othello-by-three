@@ -1,6 +1,6 @@
 ## Issue番号
 
-Close #(Issue番号)
+- Close #(Issue番号)
 
 ## 実装したこと
 

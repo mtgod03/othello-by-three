@@ -10,17 +10,19 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v4
 
+      - name: Cache turbo build setup
+        uses: actions/cache@v4
+        with:
+          path: .turbo
+          key: ${{ runner.os }}-turbo-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-turbo-
+
       - name: Setup Node.js environment
         uses: actions/setup-node@v4
         with:
           node-version-file: package.json
           cache: npm
-
-      - name: Cache turbo build setup
-        uses: actions/cache@v4
-        with:
-          path: .turbo
-          key: ${{ runner.os }}-turbo-cache
 
       - name: Install dependencies
         run: npm ci
