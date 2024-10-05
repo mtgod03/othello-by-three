@@ -14,7 +14,7 @@ describe('calculateScore', () => {
 });
 
 describe('calculateWinner', () => {
-  test('works', () => {
+  test('正常に動作する', () => {
     expect(calculateWinner({ player1: 4, player2: 4, player3: 0 })).toEqual([
       Player.PLAYER_1,
       Player.PLAYER_2,
