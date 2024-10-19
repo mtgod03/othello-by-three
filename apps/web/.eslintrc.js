@@ -8,6 +8,7 @@ module.exports = {
     '@repo/eslint-config/react.js',
     '@repo/eslint-config/next.js',
     '@repo/eslint-config/tailwind.js',
+    '@repo/eslint-config/storybook.js',
   ],
   settings: {
     tailwindcss: {
