@@ -8,21 +8,43 @@
     "start": "next start",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
-    "check-types": "tsc --noEmit"
+    "check-types": "tsc --noEmit",
+    "storybook": "storybook dev --port 6006 --no-open",
+    "build-storybook": "storybook build",
+    "gen": "turbo generate run",
+    "shadcn-add": "npx shadcn@latest add"
   },
   "dependencies": {
-    "@repo/ui": "*",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.452.0",
     "next": "14.2.6",
     "react": "18.3.1",
-    "react-dom": "18.3.1"
+    "react-dom": "18.3.1",
+    "tailwind-merge": "^2.5.3",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
+    "@chromatic-com/storybook": "^1.9.0",
     "@repo/eslint-config": "*",
     "@repo/typescript-config": "*",
+    "@storybook/addon-essentials": "^8.3.5",
+    "@storybook/addon-interactions": "^8.3.5",
+    "@storybook/addon-links": "^8.3.5",
+    "@storybook/addon-onboarding": "^8.3.5",
+    "@storybook/blocks": "^8.3.5",
+    "@storybook/experimental-nextjs-vite": "^8.3.5",
+    "@storybook/react": "^8.3.5",
+    "@storybook/test": "^8.3.5",
+    "@turbo/gen": "^2.2.0",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "autoprefixer": "^10.4.20",
     "eslint": "^8",
+    "postcss": "^8.4.47",
+    "storybook": "^8.3.5",
+    "tailwindcss": "^3.4.13",
     "typescript": "^5"
   }
 }

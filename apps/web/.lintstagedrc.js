@@ -7,7 +7,7 @@ const otherFiles = `!({${jsFiles},${tsFiles}})`;
 const tscCommand = () => 'tsc --noEmit';
 const nextLintCommand = (files) =>
   `next lint --fix ${files.map((f) => `--file ${relative(process.cwd(), f)}`).join(' ')}`;
-const prettierCommand = 'prettier --write --ignore-unknown';
+const prettierCommand = 'prettier --write --ignore-path ../../.prettierignore --ignore-unknown';
 
 /** @type {import('lint-staged').Config} */
 module.exports = {

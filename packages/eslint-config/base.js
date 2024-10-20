@@ -19,7 +19,6 @@ module.exports = {
   plugins: ['unused-imports'],
   rules: {
     // onにするルール
-    'func-style': 'warn',
     'import/order': [
       'warn',
       {
@@ -45,6 +44,14 @@ module.exports = {
       },
     },
   },
+  overrides: [
+    {
+      files: ['turbo/generators/config.[jt]s'],
+      rules: {
+        'import/no-default-export': 'off',
+      },
+    },
+  ],
   ignorePatterns: [
     // Ignore dotfiles
     '.*.js',

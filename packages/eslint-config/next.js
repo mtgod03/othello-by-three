@@ -15,7 +15,7 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['app/**/*.[jt]s?(x)'],
+      files: ['**/app/**/*.[jt]s?(x)'],
       rules: {
         'import/no-default-export': 'off',
       },
