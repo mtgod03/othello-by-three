@@ -19,7 +19,6 @@ module.exports = {
   plugins: ['unused-imports'],
   rules: {
     // onにするルール
-    'func-style': 'warn',
     'import/order': [
       'warn',
       {
