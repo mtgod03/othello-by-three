@@ -45,6 +45,14 @@ module.exports = {
       },
     },
   },
+  overrides: [
+    {
+      files: ['turbo/generators/config.[jt]s'],
+      rules: {
+        'import/no-default-export': 'off',
+      },
+    },
+  ],
   ignorePatterns: [
     // Ignore dotfiles
     '.*.js',

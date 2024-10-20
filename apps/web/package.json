@@ -11,6 +11,7 @@
     "check-types": "tsc --noEmit",
     "storybook": "storybook dev --port 6006 --no-open",
     "build-storybook": "storybook build",
+    "gen": "turbo generate run",
     "shadcn:add": "npx shadcn@latest add"
   },
   "dependencies": {
@@ -35,11 +36,13 @@
     "@storybook/experimental-nextjs-vite": "^8.3.5",
     "@storybook/react": "^8.3.5",
     "@storybook/test": "^8.3.5",
+    "@turbo/gen": "^2.2.0",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.4.20",
     "eslint": "^8",
+    "inquirer-fuzzy-path": "^2.3.0",
     "postcss": "^8.4.47",
     "storybook": "^8.3.5",
     "tailwindcss": "^3.4.13",
